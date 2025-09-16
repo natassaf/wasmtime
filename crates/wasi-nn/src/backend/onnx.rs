@@ -11,7 +11,7 @@ use std::path::Path;
 use std::sync::{Arc, Mutex};
 use ort::session::Session;
 
-#[derive(Default)]
+#[derive(Default, Clone)]
 pub struct OnnxBackend();
 unsafe impl Send for OnnxBackend {}
 unsafe impl Sync for OnnxBackend {}
